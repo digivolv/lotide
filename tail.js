@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   let doesThisPass = true;
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] === expected[i]) {
