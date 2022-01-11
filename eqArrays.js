@@ -27,12 +27,6 @@ const eqArrays = (arrayOne, arrayTwo) => {
     }
   }
   console.log(doesThisPass);
-  // if (doesThisPass === true && arrayOne.length > 1) {
-  // console.log(`✅✅✅ Assertion Passed at all indexes`);
-  // } else {
-  // console.log(`🛑🛑🛑 Assertion Failed one or more indexes`);
-  // }
-  //console.log("arrayOne === arrayTwo: " + arrayOne === arrayTwo);
   return doesThisPass;
 };
 
