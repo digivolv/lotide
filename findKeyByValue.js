@@ -10,7 +10,7 @@ const assertEqual = function (actual, expected) {
 
 const findKeyByValue = (tvShowList, show) => {
   let tvShowKeys = Object.keys(tvShowList);
-  let tvShowValues = Object.values(tvShowList);
+  // let tvShowValues = Object.values(tvShowList);
   for (key of tvShowKeys) {
     console.log(key);
     if (tvShowList[key] === show) {
