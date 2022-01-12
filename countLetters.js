@@ -10,9 +10,10 @@ const assertEqual = function (actual, expected) {
 
 const countLetters = (sentence) => {
   let count = {};
-
+  let stripped = sentence.replace(/\s/g, "");
+  console.log("stripped: " + stripped);
   for (const letter of stripped) {
-    console.log(letter);
+    // console.log(letter);
     if (count[letter]) {
       count[letter] += 1;
     }
