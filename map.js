@@ -32,7 +32,7 @@ const map = (array, callback) => {
   // console.log("callback: ", callback);
 
   const returnArray = [];
-  for (item of array) {
+  for (const item of array) {
     //  returnArray.push(callback);
     // console.log("item BEFORE: ", item);
     // console.log("item AFTER: ", callback(item));

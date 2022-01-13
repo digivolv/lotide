@@ -27,8 +27,13 @@ const assertArraysEqual = (arrayOne, arrayTwo) => {
 
 const takeUntil = (array, callback) => {
   const returnArr = [];
-  for (value of array) {
-    returnArr.push(callback(value));
+  for (const value of array) {
+    // console.log("callback(value)", callback(value));
+    if (!callback(value)) {
+      returnArr.push(value);
+    } else if (callback(value)) {
+      return returnArr;
+    }
   }
   return returnArr;
 };
@@ -55,10 +60,20 @@ console.log(results2);
 
 assertArraysEqual(
   takeUntil(data1, (x) => x < 0),
-  [false, false, false, false, false, true, false, false, false]
+  [1, 2, 5, 7, 2]
 );
 
 assertArraysEqual(
   takeUntil(data2, (x) => x === ","),
-  [false, false, false, false, true, false, false, false, false]
+  ["I've", "been", "to", "Hollywood"]
 );
+
+// assertArraysEqual(
+//   takeUntil(data1, (x) => x < 0),
+//   [false, false, false, false, false, true, false, false, false]
+// );
+
+// assertArraysEqual(
+//   takeUntil(data2, (x) => x === ","),
+//   [false, false, false, false, true, false, false, false, false]
+// );
