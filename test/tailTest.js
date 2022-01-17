@@ -17,7 +17,7 @@ describe("#tail", () => {
     const expectedResult = [];
     assert.deepEqual(result, expectedResult);
   });
-  it("returns 'Hello' for ['Hello', 'Lighthouse', 'Labs']", () => {
+  it("returns ['Hello'] for ['Hello', 'Lighthouse', 'Labs']", () => {
     const result = tail(["Hello", "Lighthouse", "Labs"]);
     const expectedResult = ["Lighthouse", "Labs"];
     assert.deepEqual(result, expectedResult);

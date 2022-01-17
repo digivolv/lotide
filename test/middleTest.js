@@ -5,23 +5,34 @@ const { assertArraysEqual } = require("../assertArraysEqual");
 
 describe("#middle", () => {
   it("returns [] for [1]", () => {
-    assert.deepEqual(middle[1], undefined);
+    const result = middle[1];
+    const expectedResult = undefined;
+    assert.deepEqual(result, expectedResult);
   });
   it("returns [] for [1, 2]", () => {
-    assert.deepEqual(middle[(1, 2)], undefined);
+    const result = middle[(1, 2)];
+    const expectedResult = undefined;
+    assert.deepEqual(result, expectedResult);
   });
   it("returns [2] for [1, 2, 3]", () => {
-    // console.log("this works");
-    assert.deepEqual(middle([1, 2, 3]), [2]);
+    const result = middle([1, 2, 3]);
+    const expectedResult = [2];
+    assert.deepEqual(result, expectedResult);
   });
   it("returns [[2, 3]] for [1, 2, 3, 4]", () => {
-    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
+    const result = middle([1, 2, 3, 4]);
+    const expectedResult = [2, 3];
+    assert.deepEqual(result, expectedResult);
   });
   it("returns [] for []", () => {
-    assert.deepEqual(middle([]), []);
+    const result = middle([]);
+    const expectedResult = [];
+    assert.deepEqual(result, expectedResult);
   });
   it("returns [2, 3] for [1, 2, 3, 4]", () => {
-    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
+    const result = middle([1, 2, 3, 4]);
+    const expectedResult = [2, 3];
+    assert.deepEqual(result, expectedResult);
   });
 });
 
