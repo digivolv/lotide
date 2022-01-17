@@ -3,7 +3,7 @@ const { assert, expect } = require("chai");
 // const { assertEqual } = require("../assertEqual");
 
 describe("#countOnly", () => {
-  it("returns [] for [1]", () => {
+  it("Should return { Fang: 2, Jason: 1 }", () => {
     const firstNames = [
       "Karl",
       "Salima",
@@ -17,24 +17,33 @@ describe("#countOnly", () => {
     ];
     const result1 = countOnly(firstNames, {
       Jason: true,
-      Karima: true,
       Fang: true,
-      Agouhanna: false,
     });
 
     const result = countOnly(firstNames, result1);
-    const expectedResult = 2;
+    const expectedResult = { Fang: 2, Jason: 1 };
     assert.deepEqual(result, expectedResult);
   });
-  it("returns [] for [1, 2]", () => {
-    const firstNames = ["Karl", "Salima", "Jason", "Fang", "Kavith", "Jason"];
+  it("Should return { Fang: 2, Jason: 2 }", () => {
+    const firstNames = ["Karl", "Jason", "Fang", "Fang", "Kavith", "Jason"];
     const result1 = countOnly(firstNames, {
-      Jason: true,
+      Jason: false,
+      Fang: true,
+    });
+
+    const result = countOnly(firstNames, result1);
+    const expectedResult = { Fang: 2 };
+    assert.deepEqual(result, expectedResult);
+  });
+  it("Should return empty object", () => {
+    const firstNames = ["Karl", "Jason", "Fang", "Fang", "Kavith", "Jason"];
+    const result1 = countOnly(firstNames, {
+      Jason: false,
       Fang: false,
     });
 
     const result = countOnly(firstNames, result1);
-    const expectedResult = 1;
+    const expectedResult = {};
     assert.deepEqual(result, expectedResult);
   });
 });
