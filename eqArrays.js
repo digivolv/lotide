@@ -1,5 +1,8 @@
 const eqArrays = (arrayOne, arrayTwo) => {
   let doesThisPass = true;
+  if (arrayOne.length !== arrayTwo.length) {
+    return false;
+  }
   for (let i = 0; i < arrayOne.length; i++) {
     if (arrayOne[i] === arrayTwo[i]) {
       // console.log(
