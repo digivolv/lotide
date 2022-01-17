@@ -4,19 +4,29 @@ const { assert } = require("chai");
 
 describe("#head", () => {
   it("returns 1 for [1, 2, 3]", () => {
-    assert.strictEqual(head([1, 2, 3]), 1);
+    const result = head([1, 2, 3]);
+    const expectedResult = 1;
+    assert.strictEqual(result, expectedResult);
   });
   it("returns '5' for ['5']", () => {
-    assert.strictEqual(head(["5"]), "5");
+    const result = head(["5"]);
+    const expectedResult = "5";
+    assert.strictEqual(result, expectedResult);
   });
   it("returns 'Hello' for ['Hello', 'Lighthouse', 'Labs']", () => {
-    assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+    const result = head(["Hello", "Lighthouse", "Labs"]);
+    const expectedResult = "Hello";
+    assert.strictEqual(result, expectedResult);
   });
   it("returns 'Hello' for ['Hello', 'Lighthouse', 'Labs']", () => {
-    assert.strictEqual(head(["Hello", "Labs"]), "Hello");
+    const result = head(["Hello", "Labs"]);
+    const expectedResult = "Hello";
+    assert.strictEqual(result, expectedResult);
   });
   it("returns undefined for []", () => {
-    assert.strictEqual(head([]), undefined);
+    const result = head([]);
+    const expectedResult = undefined;
+    assert.strictEqual(result, expectedResult);
   });
 });
 

@@ -7,6 +7,4 @@ module.exports = {
   tail,
   middle,
   eqArrays,
-  assertEqual,
-  assertArraysEqual,
 };
