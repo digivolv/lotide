@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@digivolv/lotide",
   "version": "1.0.0",
   "main": "assertArraysEqual.js",
   "directories": {
@@ -13,13 +13,14 @@
     "url": "git+https://github.com/digivolv/lotide.git"
   },
   "author": "Edwin Ly",
+  "email": "edwinjly@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/digivolv/lotide/issues"
   },
   "homepage": "https://github.com/digivolv/lotide#readme",
   "keywords": [],
-  "description": "",
+  "description": "A clone of the lodash JavaScript library to practice creating various types of functions using JS. Created during Lighthouse Labs Bootcamp",
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.1.4"
